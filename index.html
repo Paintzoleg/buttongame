@@ -1,0 +1,40 @@
+Press Button! <br>
+<!-- <button>нет</button> -->
+
+
+
+<button id="yes">BUTTON</button>
+
+<script>
+    buttonPositions = [
+        [100, 100],
+        [300, 100],
+        [300, 300],
+        [100, 300],
+        [200, 600],
+        [400, 200],
+        [200, 500],
+        [600, 300],
+    ]
+
+    currentIndex = 0;
+
+
+    function updateButtonPositions(){
+        currentIndex = currentIndex +1
+
+        if (currentIndex >= 8) {
+            currentIndex = 0
+        }
+
+        yes.style.position = 'fixed'
+        positions = buttonPositions[currentIndex]
+        yes.style.left = positions[0]
+        yes.style.top = positions[1]
+
+
+    }
+
+yes.onmouseover = updateButtonPositions
+
+</script>
